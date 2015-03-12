@@ -47,15 +47,29 @@ end
 a = 25.56;
 b = 45.88;
 
-if igualdade(a, b)
+if ~isnan(igualdade(a, b))
+    if igualdade(a, b)
+        errordlg(['Algo de errado ocorreu na funcao igualdade.'...
+            'Tente mudar alguma coisa!'],'Erro na igualdade',  'modal')
+        tudo_certo = 0;
+    end
+else
+    
     errordlg(['Algo de errado ocorreu na funcao igualdade.'...
         'Tente mudar alguma coisa!'],'Erro na igualdade',  'modal')
     tudo_certo = 0;
+    
+    
 end
-
 a = 45.44;
 
-if ~maior_que(a)
+if ~isnan(maior_que(a))
+    if ~maior_que(a)
+        errordlg(['Algo de errado ocorreu na funcao maior_que.'...
+            'Tente mudar alguma coisa!'],'Erro na comparacao',  'modal')
+        tudo_certo = 0;
+    end
+else
     errordlg(['Algo de errado ocorreu na funcao maior_que.'...
         'Tente mudar alguma coisa!'],'Erro na comparacao',  'modal')
     tudo_certo = 0;
@@ -113,6 +127,9 @@ end
 
 end
 
+
+%COMECE A PARTIR DAQUI!!
+
 %Assim como esta funcao, edite as demais para atender o que se pede
 function resultado = soma(entrada_1, entrada_2)
     resultado = entrada_1 + entrada_2;
@@ -121,39 +138,39 @@ end
 %Edite esta funcao para retornar a subtracao de dois numeros fornecidos
 function resultado = subtracao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-    
+    resultado = NaN;
 end
 
 %Edite esta funcao para retornar a multiplicacao de dois numeros fornecidos
 function resultado = multiplicacao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-    
+    resultado = NaN;
 end
 
 
 %Edite esta funcao para retornar a divisao de um numero por 5
 function resultado = divisao(entrada)
     %coloque seu codigo aqui:
-    
+    resultado = NaN;
 end
 
 %Edite esta funcao para retornar uma entrada elevada a 8
 function resultado = expoente(entrada)
     %coloque seu codigo aqui:
-   
+    resultado = NaN;
 end
 
 %Edite esa funcao para retornar TRUE caso as duas entradas sejam
 %iguais e retorna FAlSE caso contrario.
 function resultado = igualdade(entrada_1, entrada_2)
-    
+    resultado = NaN;
 end
 
 %Edite esta funcao para retornar TRUE caso a entrada seja maior que
 %12 ou retornar FALSE caso contrario
 function resultado = maior_que(entrada)
     %coloque seu codigo aqui:
-    
+    resultado = NaN;
     
 end
 
@@ -162,20 +179,20 @@ end
 %ou retornar 'MAIOR' caso a entrada for MAIOR que 30.
 function resultado = controle_de_fluxo(entrada)
     %coloque seu codigo aqui:
-       
+     resultado = NaN;  
 
 end
 
 %Edite esta funcao para retornar os elementos de um vetor a partir de N.
 function resultado = indice_vetor_um(entrada, N)
     %coloque seu codigo aqui:
-    
+    resultado = NaN;
 
 end
 
 
-%Edite esta funcao para retorna os N primeios valores de um vertor. 
+%Edite esta funcao para retorna os N primeios valores de um vertor.
 function resultado = indice_vetor_dois(entrada, N)
     %coloque seu codigo aqui:
-
+    resultado = NaN;
 end
