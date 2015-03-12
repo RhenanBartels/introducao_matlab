@@ -47,7 +47,7 @@ end
 a = 25.56;
 b = 45.88;
 
-if igualda(a, b)
+if igualdade(a, b)
     errordlg(['Algo de errado ocorreu na funcao igualdade.'...
         'Tente mudar alguma coisa!'],'Erro na igualdade',  'modal')
     tudo_certo = 0;
@@ -55,7 +55,7 @@ end
 
 a = 45.44;
 
-if maior_que(a)
+if ~maior_que(a)
     errordlg(['Algo de errado ocorreu na funcao maior_que.'...
         'Tente mudar alguma coisa!'],'Erro na comparacao',  'modal')
     tudo_certo = 0;
@@ -63,33 +63,52 @@ end
 
 a = 18.78;
 
-if ~strcmp(controle_de_fluxo(a), 'ENTRE') || strcmp(controle_de_fluxo(a),...
-        'entre') || strcmp(controle_de_fluxo(a), 'Entre')
+try
+if ~(strcmp(controle_de_fluxo(a), 'ENTRE') || strcmp(controle_de_fluxo(a),...
+        'entre') || strcmp(controle_de_fluxo(a), 'Entre'))
     
     errordlg(['Algo de errado ocorreu na funcao controle_de_fluxo.'...
         'Tente mudar alguma coisa!'],'Erro no controle de fluxo',  'modal')
     tudo_certo = 0;
 end
+catch
+    errordlg(['Algo de errado ocorreu na funcao controle_de_fluxo.'...
+        'Tente mudar alguma coisa!'],'Erro no controle de fluxo',  'modal')
+    tudo_certo = 0;
+end
 
-a = 4:3:20;
+a = 4:3:78;
 
-if indice_vertor_um(a) == [4, 7, 10, 13];
+try
+if ~indice_vetor_um(a, 7) == a(7: end);
     errordlg(['Algo de errado ocorreu na funcao indice_vetor_um.'...
         'Tente mudar alguma coisa!'],'Erro no indice',  'modal')
     tudo_certo = 0;
 end
+catch
+    errordlg(['Algo de errado ocorreu na funcao indice_vetor_um.'...
+        'Tente mudar alguma coisa!'],'Erro no indice',  'modal')
+    tudo_certo = 0;
 
-a = 'Curso Matlab';
+end
 
-if ~strcmp(indice_vetor_dois(a), 'tlab')
+a = 34 : 100;
+
+try
+if ~indice_vetor_dois(a, 6) == [34, 35, 36, 37, 38, 39]
     
+    errordlg(['Algo de errado ocorreu na funcao indice_vetor_dois.'...
+        'Tente mudar alguma coisa!'],'Erro no indice',  'modal')
+    tudo_certo = 0;
+end
+catch
     errordlg(['Algo de errado ocorreu na funcao indice_vetor_dois.'...
         'Tente mudar alguma coisa!'],'Erro no indice',  'modal')
     tudo_certo = 0;
 end
 
 if tudo_certo
-    msgdlg('Tudo Funcionou Corretamente!', 'Tudo Certo', 'modal')
+    msgbox('Tudo Funcionou Corretamente!', 'Tudo Certo')
 end
 
 end
@@ -102,26 +121,26 @@ end
 %Edite esta funcao para retornar a subtracao de dois numeros fornecidos
 function resultado = subtracao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-   
+    
 end
 
 %Edite esta funcao para retornar a multiplicacao de dois numeros fornecidos
-function resultado = multiplicao(entrada_1, entrada_2)
+function resultado = multiplicacao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-
+    
 end
 
 
 %Edite esta funcao para retornar a divisao de um numero por 5
 function resultado = divisao(entrada)
     %coloque seu codigo aqui:
-
+    
 end
 
 %Edite esta funcao para retornar uma entrada elevada a 8
 function resultado = expoente(entrada)
     %coloque seu codigo aqui:
-
+   
 end
 
 %Edite esa funcao para retornar TRUE caso as duas entradas sejam
@@ -134,7 +153,8 @@ end
 %12 ou retornar FALSE caso contrario
 function resultado = maior_que(entrada)
     %coloque seu codigo aqui:
-
+    
+    
 end
 
 %Edite esta funcao para retornar 'Menor' caso a entrada seja MENOR ou IGUAL
@@ -142,18 +162,20 @@ end
 %ou retornar 'MAIOR' caso a entrada for MAIOR que 30.
 function resultado = controle_de_fluxo(entrada)
     %coloque seu codigo aqui:
+       
 
 end
 
-%Edite esta funcao para retornar os 4 ultimos elementos de um vetor.
-function resultado = indice_vetor_um(entrada)
+%Edite esta funcao para retornar os elementos de um vetor a partir de N.
+function resultado = indice_vetor_um(entrada, N)
     %coloque seu codigo aqui:
+    
 
 end
 
 
 %Edite esta funcao para retorna os N primeios valores de um vertor. 
-function resultado = indice_vetor_2(entrada, N)
+function resultado = indice_vetor_dois(entrada, N)
     %coloque seu codigo aqui:
 
 end
