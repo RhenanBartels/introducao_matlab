@@ -1,10 +1,10 @@
 function plot_completo()
 %vetor tempo com 1 segundos e 100 amostras.
-tempo = linspace(0, 1, 100);
+tempo = linspace(0, 1, 1000);
 
 %senoide com 5Hz e amplitude 3
-senoide = 3 * sin(2 * pi * tempo * 5)
-
+%senoide = 3 * sin(2 * pi * tempo * 5);
+senoide = randn(1, 1000);
 %Cria uma nova janela;
 figure;
 %plot o vetor senoide em funcao do vetor

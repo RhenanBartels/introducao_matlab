@@ -129,7 +129,6 @@ end
 
 
 %COMECE A PARTIR DAQUI!!
-
 %Assim como esta funcao, edite as demais para atender o que se pede
 function resultado = soma(entrada_1, entrada_2)
     resultado = entrada_1 + entrada_2;
@@ -138,39 +137,43 @@ end
 %Edite esta funcao para retornar a subtracao de dois numeros fornecidos
 function resultado = subtracao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada_1 - entrada_2;
 end
 
 %Edite esta funcao para retornar a multiplicacao de dois numeros fornecidos
 function resultado = multiplicacao(entrada_1, entrada_2)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada_1 * entrada_2;
 end
 
 
 %Edite esta funcao para retornar a divisao de um numero por 5
 function resultado = divisao(entrada)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada / 5;
 end
 
 %Edite esta funcao para retornar uma entrada elevada a 8
 function resultado = expoente(entrada)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada ^ 8;
 end
 
 %Edite esa funcao para retornar TRUE caso as duas entradas sejam
 %iguais e retorna FAlSE caso contrario.
 function resultado = igualdade(entrada_1, entrada_2)
-    resultado = NaN;
+    if entrada_1 == entrada_2
+        resultado = true;
+    else
+        resultado = false;
+    end
 end
 
 %Edite esta funcao para retornar TRUE caso a entrada seja maior que
 %12 ou retornar FALSE caso contrario
 function resultado = maior_que(entrada)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada > 12;
     
 end
 
@@ -179,14 +182,20 @@ end
 %ou retornar 'MAIOR' caso a entrada for MAIOR que 30.
 function resultado = controle_de_fluxo(entrada)
     %coloque seu codigo aqui:
-     resultado = NaN;  
+     if entrada <= 10
+         resultado = 'Entre';
+     elseif entrada > 10 && entrada < 30
+         resultado = 'Entre';
+     else
+         resultado = 'Maior';
+     end
 
 end
 
 %Edite esta funcao para retornar os elementos de um vetor a partir de N.
 function resultado = indice_vetor_um(entrada, N)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada(N:end);
 
 end
 
@@ -194,5 +203,5 @@ end
 %Edite esta funcao para retorna os N primeios valores de um vertor.
 function resultado = indice_vetor_dois(entrada, N)
     %coloque seu codigo aqui:
-    resultado = NaN;
+    resultado = entrada(1:N);
 end

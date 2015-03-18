@@ -13,7 +13,16 @@ plot(tempo, seno, 'r'); %'r' faz plotar em vermelho
 %sem sobrepor
 hold on
 
-plot(tempo, cosseno, 'g')  %--'g' faz plotar em verde
+plot(tempo, cosseno, 'g.-')  %--'g' faz plotar em verde
+xlabel('Tempo (s)')
+
+%Ajusta o limite do eixo x
+%xlim([-2 2])
+
+%Ajuste o limite do eixo y
+%ylim([-3 3])
 
 %Nao pode esquecer!!
+
+legend('Seno', 'Cosseno')
 hold off
