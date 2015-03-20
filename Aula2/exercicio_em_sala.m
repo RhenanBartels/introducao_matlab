@@ -24,10 +24,13 @@ function plot_matriz(matriz)
 end
 
 function subplot_matriz(matriz)
+figure;
 [linha, coluna] = size(matriz);
 
 for valor = 1:linha
-    subplot(linha, coluna, valor)
+    %A funcao floor retorna o arredondamento inferior de um numero
+    %exemplo. floor(3.123) -> 3
+    subplot(floor(linha/2), floor(linha/2), valor)
     plot(matriz(valor, :))
 end
 end
