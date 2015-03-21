@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Introduçāo ao Matlab Aula 02</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Rhenan Bartels">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="/path/to/styles/default.css">
+    <script src="/path/to/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background-transition="slide" data-background="Imagens/ufrj_black.png"
+                style="background: rgba(0,129,0,.9); color: white" id="presentable" class="bookend">
+        <h2 style="color: rgba(255, 225, 255, .9)">Introduçāo ao
+        Matlab
+    </h2>
+    <p> Aula 02</p>
+    <p> Rhenan Bartels </p>
+    <small><p>Universidade Federal do Rio de Janeiro<br>17 de Março 2015 </p></small>
+    <!--<small><p>Instrutor: <a target="_blank" href="http://rhenanbartels.wordpress.con">
+            Rhenan Bartels</a></p></small>
+          <p>
+            <small>Created by <a href="http://github.com/RhenanBartels">Rhenan Bartels</a> / <a href="http://twitter.com/RhenanBartels">@RhenanBartels</a></small>
+            </p>-->
+            </section>
+            <section>
+                <section>
+                     <h2> O que nós vimos...</h2>
+                </section>
+                <section>
+                    <h2> Variáveis </h2>
+                    <table class="fragment">
+                        <thead>
+                            <tr>
+                                <th><span style="color:#F7FE2E">Tipo</span></th>
+                                <th><span style="color:#F7FE2E">Exemplo</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inteiro</td>
+                                <td>idade = 25;</td>
+                            </tr>
+                            <tr>
+                                <td>Racionais</td>
+                                <td>peso = 85.64;</td>
+                            </tr>
+                            <tr>
+                                <td><em>Char</em> </td>
+                                <td>inicial = 'R';
+                                </tr>
+                                <tr>
+                                    <td><em>String</em></td>
+                                    <td>nome = 'João';</td>
+                                </tr>
+                                <tr>
+                                    <td><em>Boolean</em></td>
+                                    <td>sedentario = true;</td>
+                                </tr>
+
+                        </tbody>
+                    </table>
+                    </section>
+                    <section>
+                    <h2> Operadores </h2>
+                    <table class="fragment">
+                        <thead>
+                            <tr>
+                                <th><span style="color:#F7FE2E">Tipo</span></th>
+                                <th><span style="color:#F7FE2E">Operador</span></th>
+                                <th><span style="color:#F7FE2E">Exemplo</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Soma</td>
+                                <td>+</td>
+                                <td>resultado = 5.6 + 10.2;</td>
+                            </tr>
+                            <tr>
+                                <td>Subtração</td>
+                                <td alignment="center">-</td>
+                                <td>delta = 100 - 34.5;</td>
+                            </tr>
+                            <tr>
+                                <td>Multiplicação </td>
+                                <td>*</td>
+                                <td>resultado = 20 * 76.09;</td>
+                                </tr>
+                                <tr>
+                                    <td>Divisão</td>
+                                    <td>/</td>
+                                    <td>seg = miliseg / 1000;</td>
+                                </tr>
+                                <tr>
+                                    <td>Expoente</td>
+                                    <td>^</td>
+                                    <td>resultado = 12.45 ^ 2;</td>
+                                </tr>
+
+                        </tbody>
+                    </table>
+                    </section>
+                    <section>
+                    <h2> Operadores </h2>
+                    <table class="fragment">
+                        <thead>
+                            <tr>
+                                <th><span style="color:#F7FE2E">Tipo</span></th>
+                                <th><span style="color:#F7FE2E">Operador</span></th>
+                                <th><span style="color:#F7FE2E">Exemplo</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Igualdade</td>
+                                <td>==</td>
+                                <td>saida = altura == media;</td>
+                            </tr>
+                            <tr>
+                                <td>Diferença</td>
+                                <td alignment="center">~=</td>
+                                <td>saida = peso ~= mediana;</td>
+                            </tr>
+                            <tr>
+                                <td>Maior Igual </td>
+                                <td>>=</td>
+                                <td>saida = idade >= 18;</td>
+                                </tr>
+                                <tr>
+                                    <td>Menor Igual</td>
+                                    <td><=</td>
+                                    <td>saida = peso <= 45.00;</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                    </section>
+                    <section>
+                    <h2>Controle de Fluxo - <code>for</code> </h2>
+                    <pre class="fragment"><code class="matlab">
+meu_vetor = [10.34, 45.67, 23,42, 10.00, 34.63, 89.123, 112.23];
+
+for numero = 1:length(meu_vetor)
+    meu_vetor_novo(numero) = meu_vetor(numero) / 10;
+end
+
+                    </pre></code>
+
+                    </section>
+                    <section>
+                    <h2>Controle de Fluxo - <code>while</code> </h2>
+                    <pre class="fragment"><code class="matlab">
+valor_aleatorio = randn(1);
+cont = 1;
+
+while valor_aleratorio < 0.5
+    meus_valores_aleatorios(cont) = valor_aletorio;
+    valor_aleatorio = rand(1);
+    cont = cont + 1;
+end
+                    </pre></code>
+                    </section>
+                    <section>
+                    <h2>Controle de Fluxo - <code>if elseif</code> </h2>
+                    <pre class="fragment"><code class="matlab">
+pressao_arterial_sistolica = 112.34;
+
+if pressao_arterial_sistolica <= 120.00
+    disp('Pressão Normal')
+elseif pressao_arterial > 120.00 && pressao_arterial < 140.00
+    disp('Pressão Limítrofe')
+else
+    disp('Pressão Alta')
+end
+                    </pre></code>
+                    </section>
+                    <section>
+                    <h2>Controle de Fluxo - <code>switch case</code> </h2>
+                    <pre class="fragment"><code class="matlab">
+distribuicao = 'normal';
+
+switch distribuicao
+    case 'normal'
+        mean(meu_vetor);
+    case 'nao_normal'
+        median(meu_vetor);
+    otherwise
+        'nada'
+end
+                    </pre></code>
+                    </section>
+                    <section>
+                    <h2> Vetores e Indexação </h2>
+                    <pre class="fragment"><code clas="matlab">
+meu_vetor = [10.34, 45.67, 23,42, 10.00, 34.63, 89.123, 112.23];
+
+meu_vetor(2:end);
+meu_vetor(3:5);
+
+                        </pre></code>
+                    </section>
+                    <section>
+                    <h2> Funções </h2>
+                    <pre class="fragment"><code clas="matlab">
+[saida_1, saida_2] = minha_funcao(entrada_1, entrada_2)
+      %faço alguma coisa
+end
+                        </pre></code>
+                    </section>
+            </section>
+        <section>
+            <h3> <span style="color:#F7FE2E">Conteúdo</span> </h3>
+            <ul>
+                <li class="fragment">Mais sobre vetores e indexação</li>
+                <li class="fragment">Matrizes</li>
+                <li class="fragment"><em> Cell Array </em></li>
+                <li class="fragment">Figuras </li>
+                <li class="fragment">Exercício</li>
+            </ul>
+            </section>
+            <section>
+            <section>
+                <h2> Indexação </h2>
+                <h3 class="fragment"> <em> <span style="color:#F7FE2E">
+                start, step, stop</span> </em>
+                    </section>
+
+            <section>
+            <h2> Indexação </h2>
+            <pre><code  class="matlab">
+vetor_qualquer = [198.23, 123.12, 111.456, 90.87, 456.20, 87.87, 123.43];
+
+%do primeiro ao ultimo de 2 em 2
+vetor_qualquer(1:2:end);
+
+%do segundo ao ultimo de 3 em 3
+vetor_qualquer(1:3:end)
+
+%os ultimos 4 elementos
+vetor_qualquer(end-4:end)
+
+%os ultimos 10 elementos de 4 em 4
+vetor = randn(1, 20);
+vetor(end-10:4:end);
+            </pre></code>
+            </section>
+            <section>
+            <h2>Construção de Vetores </h2>
+            <pre class="fragment"><code class="matlab">
+%Vetor de 0 a 10 com 100 elementos
+vetor_linear = linspace(0, 10, 100);
+
+%Mesma coisa
+vetor_linear = 0:1/100:10;
+
+%Constroi um vetor com numeros aleatorios
+%com distribuicao normal
+vetor_aleatorio = randn(1, 100);
+
+            </pre></code>
+            </section>
+            <section>
+                <h2> Matrizes </h2>
+                <pre class="fragment"><code class="matlab">
+%Constroi uma matriz de valores aleatorios
+%com 5 linhas e 5 colunas
+matriz_aleatoria = randn(5, 5);
+
+%Matriz com 2 linhas e 4 colunas
+minha_matriz = [1, 2, 3, 4; 5, 6, 7, 8];
+
+%Matriz com 3 linhas e 4 colunas
+%com todos os valores 1
+matriz_um = ones(3, 4);
+                </pre></code>
+            </section>
+            <section>
+            <h2>Indexação de matrizes</h2>
+            <pre class="fragment"><code class="matlab">
+%Cria matriz com valores aletrios
+matriz_aleatoria = randn(10, 10);
+
+%Elemento linha 1 coluna 2
+matriz_aleatoria(1, 2);
+
+%Elemento linha 3 coluna 8
+matriz_aleatoria(3, 8);
+
+%Todos os elementos da setima linha
+matriz_aleatoria(7, :);
+
+%Todos os elementos da quinta coluna
+matriz_aletoria(:, 5);
+            </pre></code>
+            </section>
+            <section>
+            <h2>Indexação de matrizes</h2>
+            <pre><code class="matlab">
+matriz = randn(10, 10);
+
+%Elementos da 3 a 5 linha da 2 a 6 coluna
+matriz(3:5, 2:6)
+
+%Elementos da 2 a ultima linha de 3 em 3
+%de todas as colunas
+matriz(2:2:end, :);
+
+ </pre></code>
+            </section>
+            <section>
+            <h2>Operações com Vetores e Matrizes </h2>
+            <pre class="fragment"><code class="matlab">
+A = [1, 2; 3, 4];
+
+resultado = A * 3; %Multiplicação por um escalar;
+>>> resultado =
+    3  6
+    9 12
+
+resultado = A / 3;
+>>> resultado =
+    0.333 0.666
+    3     1.333
+                </pre></code>
+            </section>
+            <section>
+            <h2>Operações com Vetores e Matrizes </h2>
+            <pre><code class="matlab">
+A = [1, 2; 3, 4];
+B = [5, 6; 7, 8];
+resultado = A * B %Produto Matricial
+>>> resultado =
+    19 22
+    43 50
+
+resultado = A .* B %Produto valor a valor
+>>> resultado =
+    5 12
+    21 32
+
+resultado = A ^ 2; %Operação Matricial
+>>> resultado =
+    7 10
+    15 22
+
+resultado = A .^ 2; %Exponenciação valor a valor
+>>> resultado =
+    1 4
+    9 16
+                </pre></code>
+            </section>
+            <section>
+            <h2> Operações com vetores e matrizes </h2>
+            <pre><code class="matlab">
+A = randn(5, 10);
+
+size(A);  %5, 10
+
+%Transposta de A
+A = A';
+size(A)  %10, 5
+            </pre></code>
+            </section>
+            <section>
+            <h2>Operações em matrizes ocorrem por coluna</h2>
+            <pre class="fragment"><code class="matlab">
+matriz_aleatoria = randn(3, 5);
+mean(matriz_aleatoria);
+>>> ans =
+    0.8567    0.5671    0.1454    0.6882   -0.0682
+
+            </pre></code>
+            </section>
+            <section>
+            <h2>Laços em Matrizes </h2>
+            <pre class="fragment"><code class="matlab">
+%Cria uma matriz 10 por 10
+%de valores aleatorios
+matriz = randn(10, 10);
+
+%percorre as linhas da matriz
+for linha = 1:length(matriz)
+    matriz(linha, :);
+end
+
+%percorre as colunas da matriz
+for coluna = 1:length(matriz)
+    matriz(:, coluna);
+end
+                </pre></code>
+            </section>
+            <section>
+            <h2>Laços em Matrizes </h2>
+            <pre><code class="matlab">
+%Cria uma matriz 4 por 8
+%de valores aleatorios
+matriz = randn(8, 4);
+
+%Calcula a media de cada linha
+for linha = 1:length(matriz)
+    media(linha) = mean(matriz(linha, :));
+end
+
+                </pre></code>
+            </section>
+            <section>
+            <h2>Erros com Vetores e Matrizes</h2>
+            <pre class="fragment"><code class="matlab">
+%Matriz deve ser quadrada ou retangular.
+matriz = [1, 2, 3; 4, 5, 6; 7, 8]  % -- Erro
+
+matriz = [1, 2; 3, 4, 5, 6]; % -- Erro
+
+matriz = ['Primeiro';'Segundo']; % --  Erro
+
+vetor = [1, 2, 'texto', 4, 5]; % -- Perigo
+            </pre></code>
+            </section>
+            <section>
+            <h2>Erros com Vetores e Matrizes</h2>
+            <pre><code class="matlab">
+A = [1, 2; 3, 4];
+B = [1, 2; 3 4; 5, 6];
+
+A * B %--Erro
+
+a = [1, 2, 3, 4];
+b = linspace(0, 8, 5);
+
+a * b %--Erro
+a .* b %--Erro
+            </pre></code>
+            </section>
+            </section>
+            <section>
+            <section>
+            <h2><em>Cell Array</em></h2>
+            <pre class="fragment"><code class="matlab">
+minha_celula = {10, 20, 30, 40, 'texto', 50, 60, 70};
+
+minha_celula{2}  %20
+
+minha_celula{5} %texto
+            </pre></code>
+            </section>
+            <section>
+            <h2><em>Cell Array</em></h2>
+            <pre><code class="matlab">
+minha_celula = {3.45, 7.654, [1:10], 'Nome', randn(6, 6)};
+
+minha_celula{3} %[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+minha_celula{4} %'Nome'
+            </pre></code>
+            </section>
+            <section>
+            <h2> Laços em <em>arrays</em></h2>
+            <pre class="fragment"><code class="matlab">
+celula = {10.32, linspace(10, 10, 1000), 6.45, 'texto'};
+
+for item = 1:length(celula)
+    disp(celula{item})
+end
+            </pre></code>
+            </section>
+            <section>
+            <h2> Laços em <em>arrays</em></h2>
+            <pre><code class="matlab">
+celula = {'Perguntas', 'Titulo', 'Respostas', 'Respostas Padrão'};
+
+for item = 1:length(celula)
+    disp(celula{item})
+end
+            </pre></code>
+            </section>
+            </section>
+            <section>
+            <section>
+            <h2> Figuras </h2>
+            <pre class="fragment"><code class="matlab">
+dados = randn(1, 100);
+
+plot(dados)
+            </pre></code>
+            </section>
+            <section>
+            <h2> Um <em> plot</em> mais completo...</h2>
+            <pre><code class="matlab">
+%vetor tempo com 1 segundo e 100 amostras.
+tempo = linspace(0, 1, 100);
+
+%senoide com 5Hz e amplitude 3
+senoide = 3 * sin(2 * pi * tempo * 5);
+
+%Cria uma nova janela;
+figure;
+%plot o vetor senoide em funcao do vetor
+%tempo na cor verde
+plot(tempo, senoide, 'g')
+
+%Nome do eixo x
+xlabel('Tempo (s)')
+
+%Nome do eixo y
+ylabel('Seno (t)')
+
+%Titulo
+title('Minha senoide')
+            </pre></code>
+            </section>
+            <section>
+            <h2><em>subplot</em></h2>
+            <pre><code class="matlab">
+%Vetor com 100 elementos
+tempo = 1:100;
+
+%Vetor com 100 elementos aleatorios
+sinal_um = randn(1, 100);
+
+%Vetor com 100 elementos aleatorios
+sinal_dois = randn(1, 100);
+
+%Subplot com 2 linhas e 1 coluna
+subplot(2, 1, 1)
+plot(tempo, sinal_um)
+
+subplot(2, 1, 2)
+plot(tempo, sinal_dois)
+            </pre></code>
+            </section>
+            <section>
+            <h2><em>Hold on </em></h2>
+            <pre><code class="matlab">
+%vetor tempo com 1 segundo e 1000 amostras
+tempo = linspace(0, 5, 1000);
+
+%seno com 3Hz
+seno = sin(2 * pi * tempo * 3);
+%cosseno com 3Hz
+cosseno = cos(2 * pi * tempo * 3);
+
+figure;
+plot(tempo, seno);
+
+%Plot na mesma figura
+%sem sobrepor
+hold on
+
+plot(tempo, cosseno, 'g')  %--'g' faz plotar em verde
+
+%Nao pode esquecer!!
+hold off
+            </pre></code>
+            </section>
+            <section>
+            <h2> Erros com plot </h2>
+            <pre><code class="matlab">
+vetor_um = linspace(0, 1, 100); %Tamanho 100
+
+vetor_dois = randn(1, 50);  %Tamanho 50
+
+plot(vetor_um, vetor_dois)  %--Erro
+            </pre></code>
+            </section>
+            </section>
+            <section>
+                <h2> Exercício </h2>
+                <p class="fragment">  <span style="color:#F7FE2E">
+                    Construir as seguintes funções:</span></p>
+                <ul class="fragment">
+                    <li>Retornar a primeira e a última linha de uma matriz</li>
+                    <li>Retornar a segunda e a penúltima coluna de uma matriz</li>
+                    <li>Retornar os valores min, max e médio de cada linha de uma matriz</li>
+                    <li>Plotar cada linha de uma matriz em uma figura</li>
+                    <li>Plotar cada linha de uma matriz com <em>subplot</em></li>
+                    <li>Plotar cada linha de uma matriz com <em>hold<em></li>
+                 </ul>
+            </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
